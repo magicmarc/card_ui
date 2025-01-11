@@ -76,7 +76,7 @@
 
 /* 星级样式 */
 .stars {
-    font-size: 1rem; 
+    font-size: 1.2rem; 
     color: gold;
     position: absolute;
     top: 15px; /* 距离顶部 */
