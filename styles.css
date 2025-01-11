@@ -1,0 +1,99 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许卡片换行 */
+    gap: 20px; /* 卡片之间的间距 */
+    justify-content: center; /* 居中对齐 */
+    margin: 0 auto; /* 居中容器 */
+    padding: 20px;
+}
+
+
+.card {
+    flex: 1 1 calc(33.333% - 40px); /* 每行最多显示3张卡片，减去gap的宽度 */
+    max-width: 300px; /* 限制卡片的最大宽度 */
+    min-width: 250px; /* 设置卡片的最小宽度 */
+    border-radius: 12px; /* 更圆滑的圆角 */
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 子元素向左对齐 */
+    justify-content: flex-start; /* 子元素向上对齐 */
+    background-color: #ffffff;
+    position: relative; /* 使星星能够绝对定位 */
+    font-family: 'Arial', sans-serif; /* 字体 */
+    line-height: 1.6; /* 行高 */
+}
+
+
+
+/* 卡片 hover 效果 */
+.card:hover {
+    transform: scale(1.05); /* 放大卡片 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
+
+.card.light {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.card.dark {
+    background: linear-gradient(to bottom right, #4a6fa5, #9375d5); /* 从左上到右下的渐变 */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 卡片头像部分样式 */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 头像与文本之间的间距 */
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 50px; /* 头像宽度 */
+    height: 50px; /* 头像高度 */
+    border-radius: 50%; /* 圆形头像 */
+    object-fit: cover; /* 确保图片保持比例裁剪 */
+    border: 2px solid #fff; /* 边框，确保在渐变背景上清晰 */
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: inherit; /* 保持字体颜色一致 */
+}
+
+/* 星级样式 */
+.stars {
+    font-size: 1.2rem; /* 稍大一点的星星 */
+    color: gold;
+    position: absolute;
+    top: 15px; /* 距离顶部 */
+    right: 15px; /* 距离右侧 */
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    font-size: 0.85rem; /* 字体稍微调小 */
+    color: #666;
+    margin: 10px 0 0;
+    text-align: justify;
+    flex-grow: 1;
+    line-height: 1.5; /* 调整行间距，提升可读性 */
+}
+
+.card.dark .content {
+    color: #ffffff; /* 字体颜色为白色 */
+}
